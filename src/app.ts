@@ -46,6 +46,11 @@ async function queryLeetCodeAPI(query: string, variables: any) {
   }
 }
 
+app.get('/ping', (req, res) => {
+  console.log("API pinged !");
+  res.status(200).send('pong');
+});
+
 app.get('/', (_req, res) => {
   res.json({
     apiOverview:
